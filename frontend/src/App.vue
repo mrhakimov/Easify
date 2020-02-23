@@ -78,16 +78,8 @@
                 axios.post("/api/1/easify", {
                     text: text
                 }).then(response => {
-                    // this.$root.text = response.data;
-                    // alert(JSON.stringify(response.data));
                     this.$root.$emit("onEasifyResult", response.data);
-                    // localStorage.setItem("jwt", response.data);
-                    // this.$root.$emit("onJwt", response.data, true);
                 });
-                // }).catch(error => {
-                //     // this.$root.$emit("onEnterValidationError", error.response.data);
-                //     // alert("ERROR");
-                // });
             });
         }, beforeMount() {
             if (localStorage.getItem("jwt") && !this.user) {
