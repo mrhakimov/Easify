@@ -2,6 +2,7 @@
 1. Add "copy" button to resulting textarea (add copy to clipboard functionality).
 2. Redesign logo.
 3. Keep wrote text even after refreshing page (session).
+4. Publish link to deployed version of Easify.
 
 ## Back-end
 1. Upload 100'000 most common words to DB.
