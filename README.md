@@ -9,4 +9,4 @@ The idea of this web application is to make the understanding of English texts e
 
 **Stack:** _Spring Framework_, _Vue.js Framework_
 
-You can read how am I going to improve this application [here](/projects/1).
+You can read how am I going to improve this application [here](https://github.com/MrHakimov/Easify/projects/1).
