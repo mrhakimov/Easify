@@ -1,7 +1,7 @@
 <template>
     <div>
         <div class="request"><textarea autofocus placeholder="Enter your text..." @change.prevent="onChange" v-model="text"></textarea></div>
-        <div class="response"><textarea readonly>{{result}}</textarea></div>
+        <div class="response"><textarea>{{result}}</textarea></div>
     </div>
 </template>
 
