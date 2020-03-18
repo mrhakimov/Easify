@@ -31,5 +31,5 @@ build/
 .vscode/
 
 ### Secrets ###
-src/main/resourses
+src/main/resources
 frontend/node_modules
