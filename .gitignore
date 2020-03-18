@@ -33,3 +33,5 @@ build/
 ### Secrets ###
 src/main/resources
 frontend/node_modules
+TODO.md
+
