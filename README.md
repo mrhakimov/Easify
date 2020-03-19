@@ -8,5 +8,6 @@ I will not say that app works correct in all cases, but usually it will give you
 The idea of this web application is to make the understanding of English texts easier by replacing difficult words with synonyms using [Thesaurus.com API](http://thesaurus.altervista.org/thesaurus/v1) to fetch synonyms and a list of 100000 most popular English words to choose the most commonly used one.
 
 **Stack:** _Spring Framework_, _Vue.js Framework_
+**Planning to use also:** _Docker_, _AWS_
 
 You can read how am I going to improve this application [here](https://github.com/MrHakimov/Easify/projects/1).
