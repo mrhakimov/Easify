@@ -1,7 +1,5 @@
-package hakimov.easify.controller;
+package ru.itmo.wp.controller;
 
-import hakimov.easify.domain.Text;
-import hakimov.easify.service.EasifyService;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.JSONValue;
@@ -11,8 +9,10 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import hakimov.easify.exception.ValidationException;
-import hakimov.easify.util.BindingResultUtils;
+import ru.itmo.wp.domain.Text;
+import ru.itmo.wp.exception.ValidationException;
+import ru.itmo.wp.service.EasifyService;
+import ru.itmo.wp.util.BindingResultUtils;
 
 import javax.validation.Valid;
 import java.io.BufferedReader;

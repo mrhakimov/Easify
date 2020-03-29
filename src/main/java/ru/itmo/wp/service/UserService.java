@@ -1,9 +1,9 @@
-package hakimov.easify.service;
+package ru.itmo.wp.service;
 
-import hakimov.easify.repository.UserRepository;
 import org.springframework.stereotype.Service;
-import hakimov.easify.domain.User;
-import hakimov.easify.form.RegisterUserCredentials;
+import ru.itmo.wp.domain.User;
+import ru.itmo.wp.form.RegisterUserCredentials;
+import ru.itmo.wp.repository.UserRepository;
 
 import java.util.List;
 

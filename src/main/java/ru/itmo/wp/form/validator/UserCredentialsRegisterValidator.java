@@ -1,10 +1,11 @@
-package hakimov.easify.form.validator;
+package ru.itmo.wp.form.validator;
 
 import org.springframework.stereotype.Component;
 import org.springframework.validation.Errors;
 import org.springframework.validation.Validator;
-import hakimov.easify.form.RegisterUserCredentials;
-import hakimov.easify.service.UserService;
+import ru.itmo.wp.form.RegisterUserCredentials;
+import ru.itmo.wp.form.UserCredentials;
+import ru.itmo.wp.service.UserService;
 
 @Component
 public class UserCredentialsRegisterValidator implements Validator {

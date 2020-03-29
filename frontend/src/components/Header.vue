@@ -1,11 +1,7 @@
 <!--suppress HtmlUnknownAnchorTarget -->
 <template>
     <header>
-        <a href="/"><img src="../assets/img/logo.png" alt="Codeforces" title="Codeforces" width="300px"/></a>
-<!--        <div class="languages">-->
-<!--            <a href="#"><img src="../assets/img/gb.png" alt="In English" title="In English"/></a>-->
-<!--            <a href="#"><img src="../assets/img/ru.png" alt="In Russian" title="In Russian"/></a>-->
-<!--        </div>-->
+        <a href="/"><img src="../assets/img/logo.png" alt="Easify" title="Easify" width="300px"/></a>
         <div class="enter-or-register-box">
             <template v-if="user">
                 {{user.login}}
@@ -18,12 +14,6 @@
                 <a href="#page=Register" @click="changePage('Register')">Register</a>
             </template>
         </div>
-<!--        <nav>-->
-<!--            <ul>-->
-<!--                <li><a href="#page=Index" @click="changePage('Index')">Home</a></li>-->
-<!--                <li><a href="#page=Users" @click="changePage('Users')">Users</a></li>-->
-<!--            </ul>-->
-<!--        </nav>-->
     </header>
 </template>
 

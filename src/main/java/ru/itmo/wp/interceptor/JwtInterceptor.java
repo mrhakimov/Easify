@@ -1,11 +1,11 @@
-package hakimov.easify.interceptor;
+package ru.itmo.wp.interceptor;
 
-import hakimov.easify.controller.ApiController;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.web.method.HandlerMethod;
 import org.springframework.web.servlet.HandlerInterceptor;
-import hakimov.easify.service.JwtService;
+import ru.itmo.wp.controller.ApiController;
+import ru.itmo.wp.service.JwtService;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;

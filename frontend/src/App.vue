@@ -1,3 +1,8 @@
+<!--$.notify("Access granted", "success");-->
+<!--$.notify("Do not press this button", "info");-->
+<!--$.notify("Warning: Self-destruct in 3.. 2..", "warn");-->
+<!--$.notify("BOOM!", "error");-->
+
 <template>
     <!--suppress HtmlUnknownTag -->
     <body id="app">

@@ -1,7 +1,10 @@
-package hakimov.easify.service;
+package ru.itmo.wp.service;
 
 import org.springframework.stereotype.Service;
-import hakimov.easify.repository.PostRepository;
+import ru.itmo.wp.domain.Post;
+import ru.itmo.wp.repository.PostRepository;
+
+import java.util.List;
 
 @Service
 public class EasifyService {

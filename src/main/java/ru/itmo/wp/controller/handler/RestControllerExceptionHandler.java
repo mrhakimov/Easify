@@ -1,13 +1,13 @@
-package hakimov.easify.controller.handler;
+package ru.itmo.wp.controller.handler;
 
-import hakimov.easify.exception.ValidationException;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseStatus;
-import hakimov.easify.exception.NoSuchResourceException;
+import ru.itmo.wp.exception.NoSuchResourceException;
+import ru.itmo.wp.exception.ValidationException;
 
 @ControllerAdvice
 public class RestControllerExceptionHandler {

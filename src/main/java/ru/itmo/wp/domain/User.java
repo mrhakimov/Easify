@@ -1,4 +1,4 @@
-package hakimov.easify.domain;
+package ru.itmo.wp.domain;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import org.hibernate.annotations.CreationTimestamp;

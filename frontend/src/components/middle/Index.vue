@@ -1,13 +1,15 @@
 <template>
     <div>
-        <div class="request"><textarea autofocus placeholder="Enter your text..." @change.prevent="onChange" v-model="text"></textarea></div>
-        <div class="response"><textarea>{{result}}</textarea></div>
+        <div class="request"><textarea autofocus placeholder="Enter your text..." @change.prevent="onChange"
+                                       v-model="text" required></textarea></div>
+        <div class="response"><textarea id="copyValue" v-model="result" readonly></textarea></div>
+        <button class="copyButton" @click.prevent="copyToClipboard()">Copy text</button>
     </div>
 </template>
 
 <script>
     export default {
-        data: function() {
+        data: function () {
             return {
                 text: "",
                 result: ""
@@ -28,6 +30,15 @@
                 this.$root.$emit("onEasify", this.text);
             }, changePage: function (page) {
                 this.$root.$emit("onChangePage", page);
+            }, copyToClipboard: function () {
+                let copyText = document.getElementById("copyValue");
+
+                copyText.select();
+                copyText.setSelectionRange(0, 99999); /*For mobile devices*/
+
+                $.notify("Do not press this button", "info");
+                alert("Copied!");
+                document.execCommand("copy");
             }
         }
     }

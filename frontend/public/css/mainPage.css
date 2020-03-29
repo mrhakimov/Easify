@@ -26,7 +26,7 @@ main {
 main textarea {
     padding: 5px;
     width: 38.3rem;
-    height: 26rem;
+    height: 25rem;
     border-radius: 5px;
 }
 
@@ -41,4 +41,15 @@ main .request textarea {
 }
 
 main .response textarea {
+}
+
+.copyButton {
+  padding: 2px;
+  border: 2px solid #e7e7e7e;
+  background-color: white;
+  transition-duration: 0.4s;
+}
+
+.copyButton:hover {
+  background-color: #e7e7e7;
 }

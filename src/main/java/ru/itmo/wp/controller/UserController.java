@@ -1,14 +1,14 @@
-package hakimov.easify.controller;
+package ru.itmo.wp.controller;
 
-import hakimov.easify.exception.ValidationException;
-import hakimov.easify.form.validator.UserCredentialsRegisterValidator;
-import hakimov.easify.service.UserService;
-import hakimov.easify.util.BindingResultUtils;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.WebDataBinder;
 import org.springframework.web.bind.annotation.*;
-import hakimov.easify.domain.User;
-import hakimov.easify.form.RegisterUserCredentials;
+import ru.itmo.wp.domain.User;
+import ru.itmo.wp.exception.ValidationException;
+import ru.itmo.wp.form.RegisterUserCredentials;
+import ru.itmo.wp.form.validator.UserCredentialsRegisterValidator;
+import ru.itmo.wp.service.UserService;
+import ru.itmo.wp.util.BindingResultUtils;
 
 import javax.validation.Valid;
 import java.util.List;
