@@ -1,6 +1,6 @@
 FROM openjdk:11.0.4
 
-ADD target/easify-backend.jar easify-backend.jar
+ADD easify-backend.jar easify-backend.jar
 
 EXPOSE 8090
 
