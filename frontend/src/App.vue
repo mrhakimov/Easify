@@ -1,8 +1,3 @@
-<!--$.notify("Access granted", "success");-->
-<!--$.notify("Do not press this button", "info");-->
-<!--$.notify("Warning: Self-destruct in 3.. 2..", "warn");-->
-<!--$.notify("BOOM!", "error");-->
-
 <template>
     <!--suppress HtmlUnknownTag -->
     <body id="app">
@@ -32,9 +27,9 @@
             Middle,
             Footer
         }, beforeCreate() {
-            axios.get("/api/1/easify").then(text => this.text = text["data"]);
-            axios.get("/api/1/posts").then(posts => this.posts = posts["data"]);
-            axios.get("/api/1/users").then(users => this.users = users["data"]);
+            axios.get("http://easify-backend:8090/api/1/easify").then(text => this.text = text["data"]);
+            axios.get("http://easify-backend:8090/api/1/posts").then(posts => this.posts = posts["data"]);
+            axios.get("http://easify-backend:8090/api/1/users").then(users => this.users = users["data"]);
 
             this.$root.$on("onLogout", () => {
                 localStorage.removeItem("jwt");
@@ -46,7 +41,7 @@
                     Authorization: "Bearer " + jwt
                 };
 
-                axios.get("/api/1/users/authorized").then(response => {
+                axios.get("http://easify-backend:8090/api/1/users/authorized").then(response => {
                     this.user = response.data;
                     if (enter) {
                         this.$root.$emit("onEnterSuccess");
@@ -55,7 +50,7 @@
             });
 
             this.$root.$on("onEnter", (login, password) => {
-                axios.post("/api/1/jwt", {
+                axios.post("http://easify-backend:8090/api/1/jwt", {
                     login: login,
                     password: password
                 }).then(response => {
@@ -72,7 +67,7 @@
                     password: password,
                     name: name
                 }).then(() => {
-                    axios.get("/api/1/users").then(users => this.users = users["data"]);
+                    axios.get("http://easify-backend:8090/api/1/users").then(users => this.users = users["data"]);
                     this.$root.$emit("onEnter", login, password);
                 }).catch(error => {
                     this.$root.$emit("onRegisterValidationError", error.response.data);
@@ -80,19 +75,11 @@
             });
 
             this.$root.$on("onEasify", (text) => {
-                axios.post("/api/1/easify", {
+                axios.post("http://easify-backend:8090/api/1/easify", {
                     text: text
                 }).then(response => {
-                    // this.$root.text = response.data;
-                    // alert(JSON.stringify(response.data));
                     this.$root.$emit("onEasifyResult", response.data);
-                    // localStorage.setItem("jwt", response.data);
-                    // this.$root.$emit("onJwt", response.data, true);
                 });
-                // }).catch(error => {
-                //     // this.$root.$emit("onEnterValidationError", error.response.data);
-                //     // alert("ERROR");
-                // });
             });
         }, beforeMount() {
             if (localStorage.getItem("jwt") && !this.user) {

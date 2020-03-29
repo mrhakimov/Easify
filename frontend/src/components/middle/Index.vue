@@ -27,6 +27,7 @@
         },
         methods: {
             onChange: function () {
+                alert("chaaange...");
                 this.$root.$emit("onEasify", this.text);
             }, changePage: function (page) {
                 this.$root.$emit("onChangePage", page);
@@ -36,7 +37,6 @@
                 copyText.select();
                 copyText.setSelectionRange(0, 99999); /*For mobile devices*/
 
-                $.notify("Do not press this button", "info");
                 alert("Copied!");
                 document.execCommand("copy");
             }

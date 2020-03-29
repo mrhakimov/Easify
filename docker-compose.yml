@@ -1,0 +1,16 @@
+version: '3'
+
+services:
+    easify-backend:
+        build: backend/.
+        ports:
+            - 8090:8090
+    easify-frontend:
+        build: frontend/.
+        ports:
+            - 8080:8080
+        depends_on:
+            - easify-backend
+        links:
+            - easify-backend
+
